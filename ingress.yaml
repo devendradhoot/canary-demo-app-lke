@@ -1,0 +1,28 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: rollouts-demo
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    spec:
+  rules:
+  - host: app.letsdevops.tk
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name:  rollouts-demo
+            port:
+              number: 80
+  - host: preview-app.letsdevops.tk
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: result-service
+            port:
+              number: 80
