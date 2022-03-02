@@ -23,6 +23,6 @@ metadata:
         path: "/"
         backend:
           service:
-            name: result-service
+            name: rollouts-demo-preview
             port:
               number: 80
