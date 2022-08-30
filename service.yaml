@@ -11,6 +11,7 @@ spec:
       targetPort: http
       protocol: TCP
       name: http
+  type: LoadBalancer
   selector:
     app: rollouts-demo
   
