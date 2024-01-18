@@ -8,7 +8,7 @@ metadata:
     ingress.kubernetes.io/app-root: "/"
 spec:
   rules:
-  - host: app.istio.k8sdemo.tk
+  - host: app.devxops.online
     http:
       paths:
       - pathType: Prefix
@@ -18,7 +18,7 @@ spec:
             name:  rollouts-demo
             port:
               number: 80
-  - host: preview-app.istio.k8sdemo.tk
+  - host: previewapp.devxops.online
     http:
       paths:
       - pathType: Prefix
